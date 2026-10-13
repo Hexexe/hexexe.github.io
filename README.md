@@ -33,7 +33,7 @@ sudo dnf group list --installed
 Uninstall a group of packages (e.g., desktop environments, development tools):
 
 ```bash
-sudo dnf groupremove "Group Name"
+sudo dnf group remove "Group Name"
 ```
 
 
@@ -94,7 +94,7 @@ Control system services:
 * List Installed Packages:
 
     ```bash
-    sudo dnf list installed
+    dnf list --installed
     ```
 * Search for Packages:
     ```bash
@@ -121,7 +121,7 @@ Change your system's identity from one Fedora edition or spin to another:
 sudo dnf swap fedora-release-identity-current fedora-release-identity-target
 ```
 * Replace fedora-release-identity-current with your current release identity package (e.g., fedora-release-identity-workstation).
-* Replace fedora-release-identity-target with the desired identity package (e.g., fedora-release-identity-kde, fedora-release-identity-xfce).
+* Replace fedora-release-identity-target with the desired identity package (e.g., fedora-release-identity-kde-desktop, fedora-release-identity-xfce).
 
 ## Verifying System Identity
 
@@ -143,13 +143,13 @@ Ensure system identity files are correctly set up:
 ``` bash
 sudo dnf reinstall fedora-release-edition
 ```
-* Replace fedora-release-edition with the appropriate package for your edition or spin (e.g., fedora-release-kde, fedora-release-mate).
+* Replace fedora-release-edition with the appropriate package for your edition or spin (e.g., fedora-release-kde-desktop, fedora-release-matecompiz).
 
 ## Reinstalling a Desktop Environment
 
 If components of a desktop environment are missing or you need to reinstall them:
 
 ``` bash
-sudo dnf groupinstall "Desktop Environment Name"
+sudo dnf group install "Desktop Environment Name"
 ```
 * Replace "Desktop Environment Name" with the name of the desktop environment group (e.g., "KDE Plasma Workspaces", "Xfce Desktop", "MATE Desktop").
